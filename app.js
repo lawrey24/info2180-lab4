@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded',()=> {
     searchBtn.addEventListener('click',()=> {
 
         const query = searchInput.value.trim();
-        //const url = `superheroes.php?query=${encodeURIComponent(query)}`;
+        const url = `superheroes.php?query=${encodeURIComponent(query)}`;
 
-        fetch('superheroes.php').then(response => {
+        fetch(url).then(response => {
             if(!response.ok){
                 throw new Error("Network response was not ok");
             }
